@@ -5,7 +5,7 @@ const moment = require("moment");
 
 const logic = async (x , y) => {
      
-    const date = moment().format();
+    const date = moment().subtract(1 , 'y').format();
     fs.writeFile("test.txt", moment().format() , ()=>{
        git.add(".").commit(date , {'--date' : date}).push();  
     });
